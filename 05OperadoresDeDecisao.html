@@ -25,6 +25,27 @@
             alert("Reprovado");
         }
 
+        //operadores lógicos
+
+        var faltas = 20;
+
+        if(media>=5 && faltas<=15){
+            alert("Aprovado");
+        }else{
+            alert("Reprovado");
+        }
+
+        if(media<5 || faltas>15){
+            alert("Reprovado");
+        }else{
+            alert("Aprovado")
+        }
+
+        if(!(media<5 || faltas>15)){
+            alert("Aprovado");
+        }else{
+            alert("Reprovado");
+        }
     </script>
 </head>
 <body>
