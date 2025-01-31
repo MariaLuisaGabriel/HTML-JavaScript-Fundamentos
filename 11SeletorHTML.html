@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seletor de Conteúdo</title>
+    <script>
+        function acao1(){
+            //pega o primeiro h1
+            var v = document.getElementsByTagName("h1")[0];
+
+            alert(v.innerHTML);
+        }
+
+        function acao2(){
+            //pega o primeiro h1
+            var v = document.getElementsByClassName("texto")[0];
+
+            alert(v.innerHTML);
+        }
+
+        function acao3(){
+            var v = document.getElementById("campo");
+
+            alert(v.value);
+        }
+
+        function acao4(){
+            var v = document.getElementsByTagName("h1")[0];
+
+            v.style.backgroundColor = "#FF0000";
+            v.style.fontSize = "20px";
+            v.innerHTML = "OMG";
+        }
+
+        function acao5(){
+            var v = document.getElementsByTagName("a")[0];
+
+            v.href = "http://www.google.com";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="acao1()">Selecionar por tag</button>
+    <button onclick="acao2()">Selecionar por classe</button>
+    <button onclick="acao4()">Alterar Conteúdo</button>
+
+    <h1>ProWay</h1>
+    <h1 class="texto" >Seletores JS</h1>
+    <h2 class="texto">Cursos ProWay</h2>
+
+    <input type="text" id="campo">
+    <button onclick="acao3()">Exibir Texto</button>
+
+    <a href="http://www.proway.com.br">Clique Aqui</a>
+    <button onclick="acao5()">Alterar Link</button>
+</body>
+</html>
