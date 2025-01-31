@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+    <script>
+        //evento de clique
+        function mensagem1(){
+            alert("botão clicado!");
+        }
+
+        //evento de interação
+        function mensagem2(){
+            var curso = document.getElementById("cursos").value;
+
+            alert(curso);
+        }
+
+        //evento de load
+        function mensagem3(){
+            alert("seja bem-vindo ao meu site!");
+        }
+        
+        //eventos de teclado:
+        //onKeyUp(exibe o caractere depois a ação), onKeyDown(executa a ação depois exibe o caractere)
+        //, onKeyPress(executa a ação e depois exibe o caractere, mas não tem suporte a teclas do tipo:
+        // F1..F12, Alt, Ctrl, Shift..)
+        function exibir(){
+            var campo = document.getElementById("campo").value;
+
+            alert(campo);
+        }
+    </script>
+</head>
+<body onload="mensagem3()">
+    <button onclick="mensagem1()">Clique Aqui</button>
+
+    <select onchange="mensagem2()" id="cursos">
+        <option>Escolha seu curso</option>
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JavaScript</option>
+    </select>
+
+    <input type="text" id="campo" onkeyup="exibir()">
+</body>
+</html>
